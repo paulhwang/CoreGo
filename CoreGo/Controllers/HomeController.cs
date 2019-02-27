@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoreGo.Models;
 
-namespace CoreGo.Controllers
+namespace Phwang.Controllers
 {
     public class HomeController : Controller
     {
+        public HomeController()
+        {
+            GlobalVariables.GlobalVariableClass.getGoRoot();
+        }
+
         public IActionResult Index()
         {
             return View();
